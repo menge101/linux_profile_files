@@ -1,0 +1,77 @@
+[user]
+	name = Nathan Menge
+	email = mengen@upmc.edu
+
+[alias]
+a = add
+br = branch
+changes = diff --name-status -r
+ci = commit
+co = checkout
+dump = cat-file -p
+d = diff # show unstaged changes
+ds = diff --staged # show staged changes
+h = help
+hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+irb = rebase --interactive
+l = log --oneline --decorate
+lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+ls-ignored = ls-files --exclude-standard --ignored --others
+m = merge
+rb = rebase
+rba = rebase --abort
+rbc = rebase --continue
+rbs = rebase --skip
+rh = reset --hard
+s = status
+sl = shortlog
+st = stash
+sta = stash apply
+stc = stash clear
+std = stash drop
+stl = stash list
+stp = stash pop
+type = cat-file -t
+uncommit = reset --soft HEAD^ # go back before last commit, with files in uncommitted state
+undo = reset --soft HEAD^
+unstage = reset HEAD # remove files from index (tracking)
+wd = diff --color-words
+wds = diff --color-words --staged 
+
+last = diff HEAD^ # show last committed change
+filelog = log -u # show changes to a file
+amend = commit --amend
+ammend = commit --amend
+mt = mergetool #fire up the merge tool
+addall = !sh -c 'git add . && git add -u'
+
+[color]
+status = auto
+branch = auto
+diff = auto
+ui = auto
+
+[color "diff"]
+meta = yellow bold
+frag = magenta bold
+old = red bold
+new = green bold
+
+[color "branch"]
+current = yellow reverse
+local = yellow
+remote = green bold
+
+[color "status"]
+added = yellow
+changed = green bold
+untracked = cyan
+
+[core]
+excludesfile = ~/.gitignore
+whitespace = trailing-space,space-before-tab
+quotepath = false
+
+[merge]
+tool = meld
+
