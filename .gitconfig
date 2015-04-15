@@ -75,3 +75,5 @@ quotepath = false
 [merge]
 tool = meld
 
+[push]
+	default = simple
