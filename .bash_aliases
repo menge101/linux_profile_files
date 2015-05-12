@@ -10,6 +10,7 @@ alias restrap='yes | ./script/bootstrap'
 alias mysql_login='mysql -uroot --ssl-ca=/opt/mysql/server-5.6/certs/ca-cert.pem'
 alias restrap_old='yes | sudo ./script/bootstrap'
 alias rubymine='~/rubymine/RubyMine-7.0.2/bin/rubymine.sh&'
+alias intellij='./intellij/idea-IU-141.713.2/bin/idea.sh&'
 #personal stuff
 alias train='cd ~/projects/training_scheduler'
 alias minis='for file in ./*_test.rb; do ruby $file; done'
