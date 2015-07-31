@@ -7,7 +7,7 @@ USER_ROOT_FILES=".bash_aliases .bash_profile .bashrc .gitconfig .profile .vimrc"
 for f in $USER_ROOT_FILES 
 do
   echo "Deploying $f"
-  cp -b ./$f ~/$f
+  rsync ./$f ~/$f
 done
 
 #deploy rubymine icls

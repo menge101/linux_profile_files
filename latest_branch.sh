@@ -10,8 +10,8 @@ RUBYMINE_FILE="Nate_modifications.icls"
 for f in $USER_ROOT_FILES
 do
   echo "Gathering latest changes from $f"
-  cp -u ~/$f ./$f
+  rsync ~/$f ./$f
 done
 
 echo "Gatheirng latest changes from $RUBYMINE_FILE"
-cp -u $RUBYMINEFILE_LOC/$RUBYMINE_FILE ./$RUBYMINE_FILE
+rsync $RUBYMINEFILE_LOC/$RUBYMINE_FILE ./$RUBYMINE_FILE
