@@ -118,3 +118,8 @@ fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
+
+export PATH="$PATH:/usr/local/bin"
+
+export NVM_DIR="/Users/nmenge/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

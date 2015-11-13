@@ -1,6 +1,6 @@
 [user]
 	name = Nathan Menge
-	email = mengen@upmc.edu
+	email = mengen@turnitin.com
 
 [alias]
 a = add
@@ -68,12 +68,21 @@ changed = green bold
 untracked = cyan
 
 [core]
-excludesfile = ~/.gitignore
+	excludesfile = /Users/nmenge/.gitignore_global
 whitespace = trailing-space,space-before-tab
 quotepath = false
 
 [merge]
-tool = meld
+#osx
+tool = sourcetree
+#linux
+#tool = meld
 
 [push]
 	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

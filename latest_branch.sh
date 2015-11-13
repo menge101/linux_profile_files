@@ -6,6 +6,7 @@ git co -b latest_$(date +%Y-%m-%d=%H-%M-%S)
 USER_ROOT_FILES=".bash_aliases .bash_profile .bashrc .gitconfig .profile .vimrc"
 RUBYMINE_LOC="~/.RubyMine70/config/colors"
 RUBYMINE_FILE="Nate_modifications.icls"
+BASH_COMPLETION_FILES="rake.sh"
 
 for f in $USER_ROOT_FILES
 do
@@ -13,5 +14,12 @@ do
   rsync ~/$f ./$f
 done
 
-echo "Gatheirng latest changes from $RUBYMINE_FILE"
-rsync $RUBYMINEFILE_LOC/$RUBYMINE_FILE ./$RUBYMINE_FILE
+#echo "Gatheirng latest changes from $RUBYMINE_FILE"
+#rsync $RUBYMINEFILE_LOC/$RUBYMINE_FILE ./$RUBYMINE_FILE
+
+for f in $BASH_COMPLETION_FILES
+do
+  echo "Gathering latest changes from $f"
+  rsync ~/.bash_completion.d/$f ./$f
+done
+
