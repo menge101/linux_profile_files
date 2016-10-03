@@ -18,6 +18,7 @@ l = log --oneline --decorate
 lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 ls-ignored = ls-files --exclude-standard --ignored --others
 m = merge
+prune = remote prune
 rb = rebase
 rba = rebase --abort
 rbc = rebase --continue
@@ -71,6 +72,7 @@ untracked = cyan
 	excludesfile = /Users/nmenge/.gitignore_global
 whitespace = trailing-space,space-before-tab
 quotepath = false
+autocrlf = input
 
 [merge]
 #osx

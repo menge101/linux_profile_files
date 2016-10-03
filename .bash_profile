@@ -3,16 +3,18 @@
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
-   if [ -f $LUNCHY_DIR/lunchy-completion.bash ]; then
-     . $LUNCHY_DIR/lunchy-completion.bash
-   fi
-
-# git tab completion (homebrew)
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
-    . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+# bash tab completion (homebrew)
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
 fi
 
 PS1='[\u@\h`__git_ps1` \w]\$ '
 
-source ~/.bash_completion.d/rake.sh
+source ~/bash_completion.d/rake
+source ~/.bashrc
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/nmenge/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/nmenge/google-cloud-sdk/completion.bash.inc'

@@ -17,6 +17,8 @@ alias titan_launch='open ~/projects/titan/index.html'
 alias lux='cd ~/projects/lux'
 alias run_lux='LUX_ENV=dev rake run:services'
 alias ptol='cd ~/projects/lux/projects/Ptolemy'
+#TII stuff
+alias redis='redis-server /usr/local/etc/redis.conf'
 #personal stuff
 alias minis='for file in ./*_test.rb; do ruby $file; done'
 alias profile='cd ~/projects/linux_profile_files'
