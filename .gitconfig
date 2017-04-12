@@ -69,22 +69,30 @@ changed = green bold
 untracked = cyan
 
 [core]
-	excludesfile = /Users/nmenge/.gitignore_global
+excludesfile = ~/.gitignore_global
 whitespace = trailing-space,space-before-tab
 quotepath = false
 autocrlf = input
 
+[diff]
+  tool = meld
+[difftool]
+  prompt = false
+[difftool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args \"$LOCAL\" \"$PWD/$REMOTE\"
 [merge]
-#osx
-tool = sourcetree
-#linux
-#tool = meld
-
-[push]
-	default = simple
+  tool = meld
+[mergetool]
+  prompt = false
+[mergetool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[push]
+	default = simple

@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -116,9 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
-
 export PATH="$PATH:/usr/local/bin"
 
 export NVM_DIR="/Users/nmenge/.nvm"
@@ -126,3 +123,9 @@ export NVM_DIR="/Users/nmenge/.nvm"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Prevent python from building .pyc files
+export PYTHONDONTWRITEBYTECODE=1
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
