@@ -21,3 +21,7 @@ source '/Users/nmenge/google-cloud-sdk/completion.bash.inc'
 complete -C '/usr/local/bin/aws_completer' aws
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
