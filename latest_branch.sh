@@ -3,7 +3,7 @@ cd ~/projects/linux_profile_files
 git co -b latest_$(date +%Y-%m-%d=%H-%M-%S)
 
 #defintion of files to pull to repo
-USER_ROOT_FILES=".bash_aliases .bash_profile .bashrc .gitconfig .profile .vimrc"
+USER_ROOT_FILES="startup.py .bash_aliases .bash_profile .bashrc .gitconfig .profile .vimrc"
 RUBYMINE_LOC="~/.RubyMine70/config/colors"
 RUBYMINE_FILE="Nate_modifications.icls"
 BASH_COMPLETION_FILES="rake.sh"

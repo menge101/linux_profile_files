@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #defintion of files to deploy to user root
-USER_ROOT_FILES=".bash_aliases .bash_profile .bashrc .gitconfig .profile .vimrc"
+USER_ROOT_FILES="startup.py .bash_aliases .bash_profile .bashrc .gitconfig .profile .vimrc"
 
 #definition of files to deploy to autocomplete folder
 BASH_COMPLETION_FILES="rake.sh"

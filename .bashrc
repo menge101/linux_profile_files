@@ -130,5 +130,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Prevent python from building .pyc files
 export PYTHONDONTWRITEBYTECODE=1
 
+#point python shell to python shell startup script
+export PYTHONSTARTUP=~/startup.py
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
