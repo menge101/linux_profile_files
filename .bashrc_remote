@@ -1,0 +1,8 @@
+sshs() {
+    ssh $@ "cat > /home/ubuntu/.bashrc_temp" < ~/.bashrc_temp
+    ssh -t $@ "bash --rcfile /home/ubuntu/.bashrc_temp ; rm /home/ubuntu/.bashrc_temp"
+}
+
+alias d='docker'
+alias dps='docker ps'
+
