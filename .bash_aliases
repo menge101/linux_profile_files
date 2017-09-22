@@ -1,6 +1,6 @@
 #Turnitin aliases
 #docker stuff
-alias dmenv=' eval "$(docker-machine env dev)"'
+alias dmenv=' eval "$(docker-machine env default)"'
 alias dps='docker ps'
 alias dmstop='docker-machine stop dev'
 alias dmstart='docker-machine start dev'

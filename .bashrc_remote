@@ -1,6 +1,6 @@
 sshs() {
-    ssh $@ "cat > /home/ubuntu/.bashrc_temp" < ~/.bashrc_temp
-    ssh -t $@ "bash --rcfile /home/ubuntu/.bashrc_temp ; rm /home/ubuntu/.bashrc_temp"
+    RC_DATA=`base64 --input ${HOME}/.bash_remote`
+    ssh -t $@ "echo \"${RC_DATA}\" | base64 --decode > /tmp/${USER}_bashrc; bash --rcfile /tmp/${USER}_bashrc; rm /tmp/${USER}_bashrc"
 }
 
 alias d='docker'

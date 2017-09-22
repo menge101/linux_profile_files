@@ -15,6 +15,13 @@ else
     echo "File $FILE not found."
 fi
 
+FILE=~/.bash_functions
+if [ -f $FILE ]; then
+    source $FILE
+else
+    echo "File $FILE not found."
+fi
+
 FILE=~/.bashrc
 if [ -f $FILE ]; then
     source $FILE
