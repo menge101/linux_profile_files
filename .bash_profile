@@ -15,6 +15,13 @@ else
     echo "File $FILE not found."
 fi
 
+FILE=/usr/local/etc/bash_completion.d/git-completion.bash
+if [ -f $FILE ]; then
+    source $FILE
+else
+    echo "File $FILE not found."
+fi
+
 FILE=~/.bash_functions
 if [ -f $FILE ]; then
     source $FILE
@@ -52,6 +59,9 @@ if [ -f $FILE ]; then
 else
     echo "File $FILE not found."
 fi
+
+#setup git auto-completion
+
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
