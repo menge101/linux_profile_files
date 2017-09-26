@@ -1,10 +1,11 @@
 #!/bin/bash
 
-#defintion of files to deploy to user root
-USER_ROOT_FILES="startup.py .bashrc .bashrc_remote .bash_aliases .bash_functions .bash_profile .gitconfig .profile .vimrc"
+source common.sh
 
-#definition of files to deploy to autocomplete folder
-BASH_COMPLETION_FILES="rake.sh sshs.sh"
+#needed to prevent failure for ssh completion
+if [ ! -f ~/.ssh/config ]; then
+    touch ~/.ssh/config
+fi
 
 #deploy all user root files
 for f in $USER_ROOT_FILES 

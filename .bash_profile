@@ -58,5 +58,4 @@ fi
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-
 eval "$(pyenv init -)"
