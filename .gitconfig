@@ -1,6 +1,6 @@
 [user]
 	name = Nathan Menge
-	email = mengen@turnitin.com
+	email = nathan.menge@arcadiasolutions.com
 
 [alias]
 a = add
@@ -69,10 +69,10 @@ changed = green bold
 untracked = cyan
 
 [core]
-	excludesfile = /Users/nmenge/.gitignore_global
-whitespace = trailing-space,space-before-tab
-quotepath = false
-autocrlf = input
+  excludesfile = /Users/nmenge/.gitignore_global
+  whitespace = trailing-space,space-before-tab
+  quotepath = false
+  autocrlf = input
 
 [push]
 	default = simple
