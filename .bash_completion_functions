@@ -1,0 +1,61 @@
+_complete_ssh_hosts ()
+{
+        COMPREPLY=()
+        cur="${COMP_WORDS[COMP_CWORD]}"
+        comp_ssh_hosts=`cat ~/.ssh/known_hosts | \
+                        cut -f 1 -d ' ' | \
+                        sed -e s/,.*//g | \
+                        grep -v ^# | \
+                        uniq | \
+                        grep -v "\[" ;
+                cat ~/.ssh/config | \
+                        grep "^Host " | \
+                        awk '{print $2}'
+                `
+        COMPREPLY=( $(compgen -W "${comp_ssh_hosts}" -- $cur))
+        return 0
+}
+
+complete -F _complete_ssh_hosts ssh
+complete -F _complete_ssh_hosts sshs
+
+_gradle()
+{
+  local cur=${COMP_WORDS[COMP_CWORD]}
+  local gradle_cmd='gradle'
+  if [[ -x ./gradlew ]]; then
+    gradle_cmd='./gradlew'
+  fi
+  if [[ -x ../gradlew ]]; then
+    gradle_cmd='../gradlew'
+  fi
+
+  local commands=''
+  local cache_dir="$HOME/.gradle_tabcompletion"
+  mkdir -p $cache_dir
+
+  local gradle_files_checksum='';
+  if [[ -f build.gradle ]]; then # top-level gradle file
+    if [[ -x `which md5` ]]; then # mac
+      local all_gradle_files=$(find . -name build.gradle 2>/dev/null)
+      gradle_files_checksum=$(md5 -q -s "$(md5 -q $all_gradle_files)")
+    else # linux
+      gradle_files_checksum=($(find . -name build.gradle | xargs md5sum | md5sum))
+    fi
+  else # no top-level gradle file
+    gradle_files_checksum='no_gradle_files'
+  fi
+  if [[ -f $cache_dir/$gradle_files_checksum ]]; then # cached! yay!
+    commands=$(cat $cache_dir/$gradle_files_checksum)
+  else # not cached
+    commands=$($gradle_cmd --quiet tasks --all | grep ' - ' | awk '{print $1}' | tr '\n' ' ')
+    if [[ ! -z $commands ]]; then
+      echo $commands > $cache_dir/$gradle_files_checksum
+    fi
+  fi
+  COMPREPLY=( $(compgen -W "$commands" -- $cur) )
+}
+
+complete -F _gradle gradle
+complete -F _gradle gradlew
+complete -F _gradle ./gradlew

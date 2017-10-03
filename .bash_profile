@@ -29,6 +29,13 @@ else
     echo "File $FILE not found."
 fi
 
+FILE=~/.bash_completion_functions
+if [ -f $FILE ]; then
+    source $FILE
+else
+    echo "File $FILE not found."
+fi
+
 FILE=~/.bashrc
 if [ -f $FILE ]; then
     source $FILE
@@ -67,5 +74,6 @@ fi
 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 eval "$(jenv init -)"
 eval "$(pyenv init -)"
