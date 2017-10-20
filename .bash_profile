@@ -77,3 +77,4 @@ export PATH="$HOME/.jenv/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 eval "$(jenv init -)"
 eval "$(pyenv init -)"
+export JAVA_HOME=$(jenv javahome)
