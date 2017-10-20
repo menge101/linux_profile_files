@@ -69,7 +69,7 @@ changed = green bold
 untracked = cyan
 
 [core]
-  excludesfile = /Users/nmenge/.gitignore_global
+  excludesfile = /Users/nate/.gitignore_global
   whitespace = trailing-space,space-before-tab
   quotepath = false
   autocrlf = input
