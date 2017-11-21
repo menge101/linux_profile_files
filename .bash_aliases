@@ -6,6 +6,8 @@ alias dmstop='docker-machine stop dev'
 alias dmstart='docker-machine start dev'
 alias d='docker'
 alias dm='docker-machine'
+alias dcclean='for image in $(dps --all -f status=exited -f status=created -q); do docker rm $image; done'
+alias diclean='docker image prune -a'
 #personal stuff
 alias minis='for file in ./*_test.rb; do ruby $file; done'
 alias profile='cd ~/projects/linux_profile_files'
