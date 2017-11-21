@@ -1,4 +1,3 @@
-#Turnitin aliases
 #docker stuff
 alias dmenv=' eval "$(docker-machine env default)"'
 alias dps='docker ps'
@@ -8,6 +7,7 @@ alias d='docker'
 alias dm='docker-machine'
 alias dcclean='for image in $(dps --all -f status=exited -f status=created -q); do docker rm $image; done'
 alias diclean='docker image prune -a'
+
 #personal stuff
 alias minis='for file in ./*_test.rb; do ruby $file; done'
 alias profile='cd ~/projects/linux_profile_files'
@@ -18,8 +18,14 @@ alias prune='git remote prune origin'
 alias korra='docker run -v $(pwd)/crush-output:/app/scripts cwinters/korra'
 alias korra_validate='d run -v $(pwd)/crush-output:/app/scripts cwinters/korra validate'
 alias korra_report='d run -v $(pwd)/crush-output:/app/scripts cwinters/korra report'
+
 # Python stuff
 alias nuke_pyc='find . -name "*.pyc" -print0 | xargs -0 rm'
 alias flake8='docker run --rm -v $(pwd):/app quay.io/lightside/flake8 /app'
 alias activate='source venv/bin/activate'
 alias vv='virtualenv venv'
+
+# git stuff
+alias gp='git push --set-upstream origin $(git br | grep "*" | cut -d " " -f2)'
+alias gpf='git push -f'
+alias gd='git push origin :$(git br | grep "*" | cut -d " " -f2)'
