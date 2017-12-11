@@ -29,3 +29,6 @@ alias vv='virtualenv venv'
 alias gp='git push --set-upstream origin $(git br | grep "*" | cut -d " " -f2)'
 alias gpf='git push -f'
 alias gd='git push origin :$(git br | grep "*" | cut -d " " -f2)'
+alias grp='git remote prune'
+alias grpo='git remote prune origin'
+
