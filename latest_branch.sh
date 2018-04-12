@@ -16,3 +16,6 @@ do
   rsync ~/.bash_completion.d/$f ./$f
 done
 
+if command -v brew &> /dev/null; then
+    brew bundle dump
+fi

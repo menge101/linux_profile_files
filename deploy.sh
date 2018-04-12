@@ -33,3 +33,7 @@ do
   echo "Deploying ~/.bash_completion.d/$f"
   rsync ./$f ~/.bash_completion.d/$f
 done
+
+if command -v brew &> /dev/null; then
+    brew bundle --file=Brewfile
+fi
