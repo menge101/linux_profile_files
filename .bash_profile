@@ -72,6 +72,7 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH" 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
