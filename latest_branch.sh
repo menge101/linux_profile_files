@@ -17,5 +17,5 @@ do
 done
 
 if command -v brew &> /dev/null; then
-    brew bundle dump
+    brew bundle dump --force
 fi

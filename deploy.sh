@@ -35,5 +35,5 @@ do
 done
 
 if command -v brew &> /dev/null; then
-    brew bundle --file=Brewfile
+    brew bundle
 fi
