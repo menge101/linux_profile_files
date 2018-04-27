@@ -78,4 +78,5 @@ export PATH="$HOME/.jenv/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 eval "$(jenv init -)"
 eval "$(pyenv init -)"
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 export JAVA_HOME=$(jenv javahome)
