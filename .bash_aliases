@@ -32,3 +32,5 @@ alias gd='git push origin :$(git br | grep "*" | cut -d " " -f2)'
 alias grp='git remote prune'
 alias grpo='git remote prune origin'
 
+# docker_for_mac
+alias d4macvm='screen ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/tty'
