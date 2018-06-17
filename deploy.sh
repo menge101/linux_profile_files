@@ -37,3 +37,8 @@ done
 if command -v brew &> /dev/null; then
     brew bundle
 fi
+
+#if Vundle is not installed, install it
+if [ ! -d ~/.vim/bundle/Vundle.vim/ ]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
