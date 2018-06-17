@@ -10,6 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'inkarkat/vim-ingo-library.git'
+Plugin 'vim-scripts/SyntaxRange'
 
 
 " All of your Plugins must be added before the following line
