@@ -34,3 +34,6 @@ alias grpo='git remote prune origin'
 
 # docker_for_mac
 alias d4macvm='screen ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/tty'
+
+# Uatu aliases
+alias drake='d run -it --rm --volume ~/.aws:/root/.aws --volume $(pwd)/features:/uatu/features sandboxnexus.arcadiaanalytics.com/io.arcadia/setti/uatu:latest rake'
