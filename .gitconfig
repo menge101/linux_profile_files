@@ -73,6 +73,7 @@ untracked = cyan
   whitespace = trailing-space,space-before-tab
   quotepath = false
   autocrlf = input
+	editor = /usr/bin/vim
 
 [push]
 	default = simple

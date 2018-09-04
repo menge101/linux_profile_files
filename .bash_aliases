@@ -37,3 +37,17 @@ alias d4macvm='screen ~/Library/Containers/com.docker.docker/Data/com.docker.dri
 
 # Uatu aliases
 alias drake='d run -it --rm --volume ~/.aws:/root/.aws --volume $(pwd)/features:/uatu/features sandboxnexus.arcadiaanalytics.com/io.arcadia/setti/uatu:latest rake'
+
+# vagrant aliases
+alias vu='vagrant up'
+alias vd='vagrant destroy'
+alias vp='vagrant provision'
+alias vs='vagrant suspend'
+alias vr='vagrant resume'
+alias vs+='vagrant snapshot push'
+alias vs-='vagrant snapshot pop'
+alias vss='vagrant snapshot save'
+alias vsr='vagrant snapshot restore'
+alias vsl='vagrant snapshot list'
+alias vsd='vagrant snapshot delete'
+
