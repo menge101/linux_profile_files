@@ -35,8 +35,8 @@ alias grpo='git remote prune origin'
 # docker_for_mac
 alias d4macvm='screen ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/tty'
 
-# Uatu aliases
-alias drake='d run -it --rm --volume ~/.aws:/root/.aws --volume $(pwd)/features:/uatu/features sandboxnexus.arcadiaanalytics.com/io.arcadia/setti/uatu:latest rake'
+#react native
+alias crna='create-react-native-app'
 
 # vagrant aliases
 alias vu='vagrant up'
@@ -50,4 +50,23 @@ alias vss='vagrant snapshot save'
 alias vsr='vagrant snapshot restore'
 alias vsl='vagrant snapshot list'
 alias vsd='vagrant snapshot delete'
+
+# AWS amplify
+alias amp='amplify'
+
+# asdf stuff
+alias a='asdf'
+alias apa='asdf plugin-add'
+alias ai='asdf install'
+alias all='asdf list-all'
+alias al='asdf list'
+
+#terraform stuff
+alias tf='terraform'
+alias tfp='terraform plan'
+alias tfa='terraform apply'
+alias tfd='terraform destroy'
+alias tfs='terraform show'
+alias tfv='terraform validate'
+alias tfr='terraform refresh'
 

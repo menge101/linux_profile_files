@@ -72,11 +72,17 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+# Setup ASDF for version management
+echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.bash_profile
+
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH" 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 eval "$(jenv init -)"
+eval "$(jenv init -)"
 eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 export JAVA_HOME=$(jenv javahome)
+
+. /usr/local/opt/asdf/asdf.sh

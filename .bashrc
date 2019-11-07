@@ -135,3 +135,13 @@ export PYTHONSTARTUP=~/startup.py
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+#set Android SDK location if android SDK path exists
+ANDROID_SDK="/Users/nate/Library/Android/sdk"
+if [ ! -d "$ANDROID_SDK" ]; then
+  export ANDROID_SDK=$ANDROID_SDK
+  export PATH=$ANDROID_SDK:$PATH
+fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
