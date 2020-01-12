@@ -3,3 +3,6 @@
 
 # ignore merge artifacts
 *.orig
+
+# ignore asdf .tool-versions file, it's not relevant to this project, which is 100% bash
+.tool-versions

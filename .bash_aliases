@@ -69,4 +69,8 @@ alias tfd='terraform destroy'
 alias tfs='terraform show'
 alias tfv='terraform validate'
 alias tfr='terraform refresh'
+alias tfi='terraform init'
+
+# cat aliases
+alias ca='cat ~/.bash_aliases'
 
