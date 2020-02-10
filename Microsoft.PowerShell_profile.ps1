@@ -3,11 +3,9 @@ $env:Path += ";C:\Ruby27-x64\bin" # Add Ruby to path
 $env:Path += ";C:\Program Files (x86)\Meld;C:\Program Files (x86)\Meld\lib" #add Meld to path
 $host.ui.rawui.windowtitle="POWERSHELL - Menge"
 
-ssh-add c:\Users\nmenge\.ssh\id_rsa
-function touch {echo $null >> $args[0]}
-function fingerprint-key {ssh-keygen -l -E $args[0] -f $args[1]}
-New-Alias which get-command
+. C:\Users\nmenge\powershell_aliases.ps1
 
+ssh-add c:\Users\nmenge\.ssh\id_rsa
 
 function prompt {
   $identity = [Security.Principal.WindowsIdentity]::GetCurrent()
