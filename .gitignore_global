@@ -40,3 +40,9 @@ Thumbs.db
 ###############
 .rake_t_cache
 
+# Python trash
+###############
+*.pyc
+venv
+.venv
+

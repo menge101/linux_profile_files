@@ -18,6 +18,7 @@ l = log --oneline --decorate
 lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 ls-ignored = ls-files --exclude-standard --ignored --others
 m = merge
+nuke = reset --hard HEAD^
 prune = remote prune
 rb = rebase
 rba = rebase --abort
@@ -90,3 +91,5 @@ untracked = cyan
 [mergetool "meld"]
   trustExitCode = true
   cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
+[init]
+	defaultBranch = main
