@@ -158,10 +158,12 @@ alias gcl='gitlab-ci-local'
 # Global prptect crap
 
 function gpkill {
+  gpdereg
   kill -9 $(ps -ef | grep GlobalProtect.app | awk 'NR==1{print $2}')
 }
 
 function gpup {
+  launchctl start com.paloaltonetworks.gp.pangps
   open -a /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect
 }
 
