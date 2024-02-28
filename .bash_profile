@@ -1,6 +1,5 @@
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
-[[ -s "$HOME/.secrets" ]] && source "$HOME/.secrets" # Load the secrets, sshhh
 
 # bash tab completion (homebrew)
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -16,7 +15,7 @@ else
     echo "File $FILE not found."
 fi
 
-FILE=~/.bash_completion.d/git-completion.bash
+FILE=/usr/local/etc/bash_completion.d/git-completion.bash
 if [ -f $FILE ]; then
     source $FILE
 else
@@ -73,15 +72,8 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
-
-# Setup ASDF for version management
-. "$HOME/.asdf/asdf.sh"
 
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH" 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
-alias assume="source assume"
