@@ -16,7 +16,7 @@ else
     echo "File $FILE not found."
 fi
 
-FILE=/usr/local/etc/bash_completion.d/git-completion.bash
+FILE=~/.bash_completion.d/git-completion.bash
 if [ -f $FILE ]; then
     source $FILE
 else
@@ -83,3 +83,5 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH" 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
+
+alias assume="source assume"

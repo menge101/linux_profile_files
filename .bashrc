@@ -155,3 +155,4 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+export PATH=/opt/homebrew/bin:/Users/nathanmenge/bin:/usr/local/opt/llvm/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/nathanmenge/.pyenv/bin:/Users/nathanmenge/.yarn/bin:/Users/nathanmenge/.config/yarn/global/node_modules/.bin:/Users/nate/Library/Android/sdk:/usr/local/heroku/bin:/Users/nathanmenge/.pyenv/bin:/Users/nathanmenge/.yarn/bin:/Users/nathanmenge/.config/yarn/global/node_modules/.bin:/Users/nate/Library/Android/sdk:/usr/local/heroku/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/nathanmenge/.rvm/bin:/usr/local/bin:/Users/nathanmenge/.rvm/bin:/Users/nathanmenge/.rvm/bin:/Users/nathanmenge/.rvm/bin:/usr/local/bin:/Users/nathanmenge/.rvm/bin

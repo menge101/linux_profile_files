@@ -28,6 +28,7 @@ alias korra_report='d run -v $(pwd)/crush-output:/app/scripts cwinters/korra rep
 alias nuke_pyc='find . -name "*.pyc" -print0 | xargs -0 rm'
 alias flake8='docker run --rm -v $(pwd):/app quay.io/lightside/flake8 /app'
 alias activate='source venv/bin/activate'
+alias vnvrld='deactivate && activate'
 alias vv='python -m venv venv'
 
 # git stuff
@@ -120,6 +121,7 @@ function refresh-sso {
 }
 alias sso-creds='aws-sso-creds export --profile poc-admin'
 alias awscopy='env | grep AWS | tr "\n" ";" | pbcopy'
+alias code-artifact-login='aws codeartifact login --tool pip --domain cis --domain-owner 836962154258 --repository upmce-cdk-utils'
 
 function aws-unset {
     unset AWS_SESSION_TOKEN
