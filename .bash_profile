@@ -15,7 +15,7 @@ else
     echo "File $FILE not found."
 fi
 
-FILE=/usr/local/etc/bash_completion.d/git-completion.bash
+FILE=~/.bash_completion.d/.git-completion.bash
 if [ -f $FILE ]; then
     source $FILE
 else
@@ -76,4 +76,11 @@ fi
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH" 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
+alias assume="source assume"
+
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+. "$HOME/.local/bin/env"

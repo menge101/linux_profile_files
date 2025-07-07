@@ -8,6 +8,9 @@ alias diclean='docker image prune -a'
 alias nuke_pyc='find . -name "*.pyc" -print0 | xargs -0 rm'
 alias activate='source venv/bin/activate'
 alias vv='python3 -m venv venv'
+alias act='activate'
+alias dea='deactivate'
+alias vnvrld='deactivate && activate'
 
 # git stuff
 alias gp='git push --set-upstream origin $(git br | grep "*" | cut -d " " -f2)'
@@ -69,3 +72,5 @@ function task_status {
   fi
   terminal-notifier -message $status -title $task_name
 }
+
+alias awscopy='env | grep AWS | pbcopy'
