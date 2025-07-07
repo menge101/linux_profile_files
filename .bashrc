@@ -127,3 +127,5 @@ export PYTHONDONTWRITEBYTECODE=1
 
 
 
+
+. "$HOME/.local/bin/env"
