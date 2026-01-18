@@ -116,43 +116,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
 
 export PATH="$PATH:/usr/local/bin"
 
-export NVM_DIR="/Users/nmenge/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 # Prevent python from building .pyc files
 export PYTHONDONTWRITEBYTECODE=1
 
-#point python shell to python shell startup script
-export PYTHONSTARTUP=~/startup.py
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
-#set Android SDK location if android SDK path exists
-ANDROID_SDK="/Users/nate/Library/Android/sdk"
-if [ ! -d "$ANDROID_SDK" ]; then
-  export ANDROID_SDK=$ANDROID_SDK
-  export PATH=$ANDROID_SDK:$PATH
-fi
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Add npm/yarn bin to path
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-#ASDF stuff
-. "$HOME/.asdf/asdf.sh"
-. "$HOME/.asdf/completions/asdf.bash"
-
-# Pyenv stuff
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-export PATH=/opt/homebrew/bin:/Users/nathanmenge/bin:/usr/local/opt/llvm/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/nathanmenge/.pyenv/bin:/Users/nathanmenge/.yarn/bin:/Users/nathanmenge/.config/yarn/global/node_modules/.bin:/Users/nate/Library/Android/sdk:/usr/local/heroku/bin:/Users/nathanmenge/.pyenv/bin:/Users/nathanmenge/.yarn/bin:/Users/nathanmenge/.config/yarn/global/node_modules/.bin:/Users/nate/Library/Android/sdk:/usr/local/heroku/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/nathanmenge/.rvm/bin:/usr/local/bin:/Users/nathanmenge/.rvm/bin:/Users/nathanmenge/.rvm/bin:/Users/nathanmenge/.rvm/bin:/usr/local/bin:/Users/nathanmenge/.rvm/bin
+# Append to history, do not overwrite
+export PROMPT_COMMAND='history -a'
